@@ -119,6 +119,31 @@ namespace c_sharp_control_flow
                     Console.WriteLine("you have {0} demerit points", demeritPoints);
                 }
             }
+
+            Console.Write("Tell me a number.");
+            Int32 newNum1 = Convert.ToInt16(Console.ReadLine());
+            Console.WriteLine(newNum1);
+
+            // loop over an enumerable
+            string testStr = "The sun also rises.";
+            foreach (var i in testStr){
+                Console.WriteLine("i: " + i);
+            }
+
+            
+            while (true)
+            {
+                Console.Write("What's your name?");
+                string name = Console.ReadLine();
+                if (String.IsNullOrWhiteSpace(name)){
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Your name is {0}.", name);
+                    continue;
+                }
+            }
         }
     }
 }
