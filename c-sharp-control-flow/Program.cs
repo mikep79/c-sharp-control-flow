@@ -154,7 +154,7 @@ namespace c_sharp_control_flow
 
             //create a password using Random()
 
-            var pwLength = 10;
+            const int pwLength = 10;
             char[] pwArr = new char[pwLength];
             for (int i = 0; i < pwLength; i++)
             {
@@ -164,6 +164,40 @@ namespace c_sharp_control_flow
             // build pwArr into string
             string password = new String(pwArr);
             Console.WriteLine(pwArr);
+
+            
+            //1- Write a program to count how many numbers between 1 and 100 are divisible by 3 with no remainder. Display the count on the console.
+            for (var i = 1; i < 101; i++)
+            {
+                if (i % 3 == 0)
+                {
+                    Console.Write(i + " ");
+                }
+                else
+                {
+                    continue;
+                }
+            }
+            Console.WriteLine();
+
+            //2- Write a program and continuously ask the user to enter a number or "ok" to exit. Calculate the sum of all the previously entered numbers and display it on the console.
+
+            int num = 0;
+            while (true)
+            {
+                Console.WriteLine("Enter a number: ");
+                var inputString = Console.ReadLine();
+                if (inputString == "ok")
+                {
+                    Console.WriteLine(num);
+                    break;
+                }
+                else
+                {
+                    num += System.Convert.ToInt32(inputString);
+                    continue;
+                }
+            }
         }
     }
 }
