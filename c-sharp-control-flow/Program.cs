@@ -300,10 +300,6 @@ namespace c_sharp_control_flow
             // store as string and cw
             string reversedName = String.Join("", nameArr);
             Console.WriteLine(reversedName);
-            //foreach (var thing in nameArr)
-            //{
-            //    Console.WriteLine(thing);
-            //}
             
         }
     }
