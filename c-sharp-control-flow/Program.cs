@@ -1,5 +1,5 @@
 ﻿using System;
-//using System.Collections.Generic;
+using System.Collections.Generic;
 //using System.Linq;
 //using System.Text;
 //using System.Threading.Tasks;
@@ -259,6 +259,31 @@ namespace c_sharp_control_flow
             Console.WriteLine();
             // display final element
             Console.WriteLine("The largest number you entered is: " + resultInt[resultInt.Length-1]);
+
+
+            //Write a program and continuously ask the user to enter different names, until the user presses Enter (without supplying a name). Depending on the number of names provided, display a message based on the above pattern.
+            //declare list
+            List<string> friends = new List<string>();
+            // while loop. Add names to list.
+            while (true)
+            {
+                Console.WriteLine("Enter a name");
+                string newFriend = Console.ReadLine();
+                if (String.IsNullOrWhiteSpace(newFriend))
+                    break;
+                // add to list
+                friends.Add(newFriend);
+            }
+            // if else statements for list count
+            if (friends.Count == 1)
+                Console.WriteLine(friends[0] + " likes your post.");
+            else if (friends.Count == 2)
+                Console.WriteLine(friends[0] + " and " + friends[1] + " like your post.");
+            else if (friends.Count > 2)
+                Console.WriteLine(friends[0] + ", " + friends[1] + " and " + (friends.Count-2) + " others like your post.");
+            else
+                Console.WriteLine("No one has liked yet.");
+
         }
     }
 }
