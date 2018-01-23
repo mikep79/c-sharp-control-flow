@@ -198,6 +198,67 @@ namespace c_sharp_control_flow
                     continue;
                 }
             }
+
+            //3- Write a program and ask the user to enter a number. Compute the factorial of the number and print it on the console. For example, if the user enters 5, the program should calculate 5 x 4 x 3 x 2 x 1 and display it as 5! = 120.
+            Console.WriteLine("Give me a number");
+            string input = Console.ReadLine();
+            int inputInt = System.Convert.ToInt32(input);
+            int total = 1;
+            for (var i = inputInt; i > 0; i--)
+            {
+                total *= inputInt;
+                inputInt -= 1;
+            }
+            Console.WriteLine("Factorial is {0}.", total);
+
+            //4- Write a program that picks a random number between 1 and 10. Give the user 4 chances to guess the number. If the user guesses the number, display “You won"; otherwise, display “You lost". (To make sure the program is behaving correctly, you can display the secret number on the console first.)
+            // determine random number
+            var randomInstance = new Random();
+            int magicNum = randomInstance.Next(1, 10);
+            string magicNumStr = magicNum.ToString();
+            Console.WriteLine("Magic number is... " + magicNum);
+            // user can guess 4 times
+            for (var i = 0; i < 4; i++)
+            {
+                Console.WriteLine("Guess what the magic number is!");
+                string inputStr = Console.ReadLine();
+                // compare to magicNum
+                if (inputStr == magicNumStr)
+                {
+                    Console.WriteLine("you win!");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Guess again...");
+                    continue;
+                }
+            }
+
+            //5- Write a program and ask the user to enter a series of numbers separated by comma. Find the maximum of the numbers and display it on the console. For example, if the user enters “5, 3, 8, 1, 4", the program should display 8.
+            // ask for numbers in string format
+            Console.WriteLine("Give me a series of numbers separated by a comma (no space!).");
+            string seriesInput = Console.ReadLine();
+            // separate string by comma into array elements
+            char[] separatedStrings = new char[] { ',' };
+            string[] result;
+            result = seriesInput.Split(separatedStrings, StringSplitOptions.None);
+            int[] resultInt = new int[result.Length];
+            // convert each array element to int
+            for (var i = 0; i < result.Length; i++)
+            {
+                resultInt[i] = System.Convert.ToInt32(result[i]);
+            }
+            // sort array and display
+            Array.Sort(resultInt);
+            for (var i = 0; i < resultInt.Length; i++)
+            {
+                Console.Write(resultInt[i]);
+                Console.Write(",");
+            }
+            Console.WriteLine();
+            // display final element
+            Console.WriteLine("The largest number you entered is: " + resultInt[resultInt.Length-1]);
         }
     }
 }
