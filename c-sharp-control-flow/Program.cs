@@ -284,6 +284,27 @@ namespace c_sharp_control_flow
             else
                 Console.WriteLine("No one has liked yet.");
 
+            //2- Write a program and ask the user to enter their name. Use an array to reverse the name and then store the result in a new string. Display the reversed name on the console.
+            // cw and cr save name
+            Console.WriteLine("Enter your name: ");
+            string name = Console.ReadLine();
+            // declare array of length equal to name length
+            char[] nameArr = new char[name.Length];
+            // save letters as array
+            for (var i = 0; i < nameArr.Length; i++)
+            {
+                nameArr[i] = name[i];
+            }
+            // use reverse method on array
+            Array.Reverse(nameArr);
+            // store as string and cw
+            string reversedName = String.Join("", nameArr);
+            Console.WriteLine(reversedName);
+            //foreach (var thing in nameArr)
+            //{
+            //    Console.WriteLine(thing);
+            //}
+            
         }
     }
 }
