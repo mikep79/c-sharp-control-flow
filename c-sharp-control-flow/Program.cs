@@ -260,8 +260,17 @@ namespace c_sharp_control_flow
             // display final element
             Console.WriteLine("The largest number you entered is: " + resultInt[resultInt.Length-1]);
 
-
-            //Write a program and continuously ask the user to enter different names, until the user presses Enter (without supplying a name). Depending on the number of names provided, display a message based on the above pattern.
+            //ListExercises.Exercise1();
+            ListExercises.Exercise2();
+            ListExercises.Exercise3();
+        }
+        
+    }
+    public class ListExercises
+    {
+        public static void Exercise1()
+        {
+            //#1: Write a program and continuously ask the user to enter different names, until the user presses Enter (without supplying a name). Depending on the number of names provided, display a message based on the above pattern.
             //declare list
             List<string> friends = new List<string>();
             // while loop. Add names to list.
@@ -280,10 +289,12 @@ namespace c_sharp_control_flow
             else if (friends.Count == 2)
                 Console.WriteLine(friends[0] + " and " + friends[1] + " like your post.");
             else if (friends.Count > 2)
-                Console.WriteLine(friends[0] + ", " + friends[1] + " and " + (friends.Count-2) + " others like your post.");
+                Console.WriteLine(friends[0] + ", " + friends[1] + " and " + (friends.Count - 2) + " others like your post.");
             else
                 Console.WriteLine("No one has liked yet.");
-
+        }
+        public static void Exercise2()
+        {
             //2- Write a program and ask the user to enter their name. Use an array to reverse the name and then store the result in a new string. Display the reversed name on the console.
             // cw and cr save name
             Console.WriteLine("Enter your name: ");
@@ -300,45 +311,11 @@ namespace c_sharp_control_flow
             // store as string and cw
             string reversedName = String.Join("", nameArr);
             Console.WriteLine(reversedName);
-            
-            //3- Write a program and ask the user to enter 5 numbers. If a number has been previously entered, display an error message and ask the user to re-try. Once the user successfully enters 5 unique numbers, sort them and display the result on the console.
-            // declare array
-            //public void Exercise3(){
-            //var numList = new List<string>();
-            //int count = 0;
-            ////ask for numbers
-            //while (count < 5)
-            //{
-            //    Console.WriteLine("Give me number");
-            //    var newNum = Console.ReadLine();
-            //    if (numList.Contains(newNum))
-            //    {
-            //        // throw error and retry
-            //        Console.WriteLine("Try a DIFFERENT number.");
-            //        continue;
-            //    }
-            //    else
-            //    {
-            //        // add to list and increase count
-            //        numList.Add(newNum);
-            //        count++;
-            //    }
-            //}
-            //Console.WriteLine("Congratulations!");
-            //numList.Sort();
-            //foreach (var number in numList)
-            //{
-            //    Console.WriteLine(number);
-            //}
-            //}
-            ListExercise.Exercise3();
         }
-        
-    }
-    public class ListExercise
-    {
         public static void Exercise3()
         {
+            //3- Write a program and ask the user to enter 5 numbers. If a number has been previously entered, display an error message and ask the user to re-try. Once the user successfully enters 5 unique numbers, sort them and display the result on the console.
+            // declare list
             var numList = new List<string>();
             int count = 0;
             //ask for numbers
