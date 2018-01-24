@@ -182,22 +182,22 @@ namespace c_sharp_control_flow
 
             //2- Write a program and continuously ask the user to enter a number or "ok" to exit. Calculate the sum of all the previously entered numbers and display it on the console.
 
-            int num = 0;
-            while (true)
-            {
-                Console.WriteLine("Enter a number: ");
-                var inputString = Console.ReadLine();
-                if (inputString == "ok")
-                {
-                    Console.WriteLine(num);
-                    break;
-                }
-                else
-                {
-                    num += System.Convert.ToInt32(inputString);
-                    continue;
-                }
-            }
+            //int num = 0;
+            //while (true)
+            //{
+            //    Console.WriteLine("Enter a number: ");
+            //    var inputString = Console.ReadLine();
+            //    if (inputString == "ok")
+            //    {
+            //        Console.WriteLine(num);
+            //        break;
+            //    }
+            //    else
+            //    {
+            //        num += System.Convert.ToInt32(inputString);
+            //        continue;
+            //    }
+            //}
 
             //3- Write a program and ask the user to enter a number. Compute the factorial of the number and print it on the console. For example, if the user enters 5, the program should calculate 5 x 4 x 3 x 2 x 1 and display it as 5! = 120.
             Console.WriteLine("Give me a number");
@@ -301,6 +301,70 @@ namespace c_sharp_control_flow
             string reversedName = String.Join("", nameArr);
             Console.WriteLine(reversedName);
             
+            //3- Write a program and ask the user to enter 5 numbers. If a number has been previously entered, display an error message and ask the user to re-try. Once the user successfully enters 5 unique numbers, sort them and display the result on the console.
+            // declare array
+            //public void Exercise3(){
+            //var numList = new List<string>();
+            //int count = 0;
+            ////ask for numbers
+            //while (count < 5)
+            //{
+            //    Console.WriteLine("Give me number");
+            //    var newNum = Console.ReadLine();
+            //    if (numList.Contains(newNum))
+            //    {
+            //        // throw error and retry
+            //        Console.WriteLine("Try a DIFFERENT number.");
+            //        continue;
+            //    }
+            //    else
+            //    {
+            //        // add to list and increase count
+            //        numList.Add(newNum);
+            //        count++;
+            //    }
+            //}
+            //Console.WriteLine("Congratulations!");
+            //numList.Sort();
+            //foreach (var number in numList)
+            //{
+            //    Console.WriteLine(number);
+            //}
+            //}
+            ListExercise.Exercise3();
+        }
+        
+    }
+    public class ListExercise
+    {
+        public static void Exercise3()
+        {
+            var numList = new List<string>();
+            int count = 0;
+            //ask for numbers
+            while (count < 5)
+            {
+                Console.WriteLine("Give me number");
+                var newNum = Console.ReadLine();
+                if (numList.Contains(newNum))
+                {
+                    // throw error and retry
+                    Console.WriteLine("Try a DIFFERENT number.");
+                    continue;
+                }
+                else
+                {
+                    // add to list and increase count
+                    numList.Add(newNum);
+                    count++;
+                }
+            }
+            Console.WriteLine("Congratulations!");
+            numList.Sort();
+            foreach (var number in numList)
+            {
+                Console.WriteLine(number);
+            }
         }
     }
 }
