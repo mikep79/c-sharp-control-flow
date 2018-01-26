@@ -175,7 +175,23 @@ namespace c_sharp_control_flow
             //ListExercises.Exercise2();
             //ListExercises.Exercise3();
             //ListExercises.Exercise4();
-            ListExercises.Exercise5();
+            //ListExercises.Exercise5();
+
+            // datetimes
+            var dateTime = new DateTime(1999, 8, 30);
+            Console.WriteLine(dateTime.ToString());
+            var now = DateTime.Now;
+            var today = DateTime.Today;
+            Console.WriteLine("Today: " + today);
+            var max = DateTime.MaxValue;
+            var min = DateTime.MinValue;
+            Console.WriteLine("Date Min {0} - Max {1}", min, max);
+
+            // time spans
+            var span = new TimeSpan(3, 3, 3);
+            Console.WriteLine(span);
+            var fiveHours = TimeSpan.FromHours(5);
+            Console.WriteLine(fiveHours);
     }
 
     public class LoopExercises
