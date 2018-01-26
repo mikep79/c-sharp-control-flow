@@ -192,6 +192,24 @@ namespace c_sharp_control_flow
             Console.WriteLine(span);
             var fiveHours = TimeSpan.FromHours(5);
             Console.WriteLine(fiveHours);
+
+            var myName = "Mike";
+            myName = myName.ToUpper();
+            Console.WriteLine(myName);
+            myName.Replace("M", "t");
+            Console.WriteLine(myName);
+            Console.WriteLine(char.MaxValue + " " + char.MinValue);
+            //split string by space by finding indexof and substring(); and split
+            var fullName = "Mike Pettman";
+            int index = fullName.IndexOf(' ');
+            string first = fullName.Substring(0, index);
+            int lastLength = fullName.Length - first.Length - 1;
+            string last = fullName.Substring(index + 1, lastLength);
+            Console.WriteLine(first);
+            Console.WriteLine(last);
+            string[] nameArr = fullName.Split(' ');
+            Console.WriteLine("Name: " + nameArr[0] + " " + nameArr[1]);
+
     }
 
     public class LoopExercises
