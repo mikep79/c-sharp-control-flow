@@ -174,52 +174,8 @@ namespace c_sharp_control_flow
             //ListExercises.Exercise1();
             //ListExercises.Exercise2();
             //ListExercises.Exercise3();
-
-            //4- Write a program and ask the user to continuously enter a number or type "Quit" to exit. The list of numbers may include duplicates. Display the unique numbers that the user has entered.
-            // declare a list
-            var numList = new List<string>();
-            //while loop to run continuously
-            while (true)
-            {
-                // ask for numbers and push to numList
-                Console.WriteLine("Enter a number, or type quit.");
-                string input = Console.ReadLine();
-                // if statement to exit loop
-                if (input.ToLower() == "quit")
-                {
-                    break;
-                }
-                else
-                {
-                    numList.Add(input);
-                }
-            }
-            // display numbers
-            foreach (var number in numList)
-            {
-                Console.WriteLine("all numbers entered");
-                Console.WriteLine(number);
-            }
-            // display UNIQUE numbers
-            var uniqueList = new List<string>();
-            foreach (var number in numList)
-            {
-                if (uniqueList.Contains(number)){
-                    continue;
-                }
-                else
-                {
-                    uniqueList.Add(number);
-                }
-            }
-            Console.WriteLine("all UNIQUE numbers entered");
-            foreach (var number in uniqueList)
-            {
-                Console.WriteLine(number);
-            }
-            
-        }
-        
+            //ListExercises.Exercise4();
+            ListExercises.Exercise5();
     }
 
     public class LoopExercises
@@ -405,6 +361,91 @@ namespace c_sharp_control_flow
             {
                 Console.WriteLine(number);
             }
+        }
+        public static void Exercise4()
+        {
+            //4- Write a program and ask the user to continuously enter a number or type "Quit" to exit. The list of numbers may include duplicates. Display the unique numbers that the user has entered.
+            // declare a list
+            var numList = new List<string>();
+            //while loop to run continuously
+            while (true)
+            {
+                // ask for numbers and push to numList
+                Console.WriteLine("Enter a number, or type quit.");
+                string input = Console.ReadLine();
+                // if statement to exit loop
+                if (input.ToLower() == "quit")
+                {
+                    break;
+                }
+                else
+                {
+                    numList.Add(input);
+                }
+            }
+            // display numbers
+            Console.WriteLine("all numbers entered");
+            foreach (var number in numList)
+            {
+                Console.WriteLine(number);
+            }
+            // display UNIQUE numbers
+            var uniqueList = new List<string>();
+            foreach (var number in numList)
+            {
+                if (uniqueList.Contains(number))
+                {
+                    continue;
+                }
+                else
+                {
+                    uniqueList.Add(number);
+                }
+            }
+            Console.WriteLine("all UNIQUE numbers entered");
+            foreach (var number in uniqueList)
+            {
+                Console.WriteLine(number);
+            }
+        }
+
+        public static void Exercise5()
+        {
+            //5- Write a program and ask the user to supply a list of comma separated numbers (e.g 5, 1, 9, 2, 10). If the list is empty or includes less than 5 numbers, display "Invalid List" and ask the user to re-try; otherwise, display the 3 smallest numbers in the list.
+            // declare list<int>
+            var numList = new List<int>();
+            // start while true loop for try again feature
+            Console.WriteLine("Give me 5 numbers separated with a comma");
+            while (true)
+            {
+                string inputStr = Console.ReadLine();
+                // if null, cw "try again" and continue
+                if (System.String.IsNullOrWhiteSpace(inputStr))
+                {
+                    Console.WriteLine("Try again");
+                    continue;
+                }
+                // else: separate string, int32 convert and add to list
+                else
+                {
+                    String[] subStrings = inputStr.Split(',');
+                    foreach (var subString in subStrings)
+                    {
+                        var subInt = System.Convert.ToInt32(subString);
+                        numList.Add(subInt);
+                    }
+                    // if list .count = < 5, cw "try again" and continue; else break
+                    if (numList.Count < 5)
+                    {
+                        Console.WriteLine("Try again");
+                        continue;
+                    }
+                    break;
+                }
+            }
+            numList.Sort();
+            Console.WriteLine("The lowest three numbers are {0}, {1}, and {2}.", numList[0], numList[1], numList[2]);
+        }    
         }
     }
 }
