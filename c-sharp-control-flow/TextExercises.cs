@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace c_sharp_control_flow
 {
@@ -117,6 +118,43 @@ namespace c_sharp_control_flow
                 }
             }
         } // end exercise3()
+
+        public static void Exercise4()
+        {
+            //4- Write a program and ask the user to enter a few words separated by a space. Use the words to create a variable
+            //name with PascalCase. For example, if the user types: "number of students", display "NumberOfStudents". Make sure 
+            //that the program is not dependent on the input. So, if the user types "NUMBER OF STUDENTS", the program should still display "NumberOfStudents".
+            // take input, split (' ') into array
+            // declare list.
+            // foreach in array, add to list, then toLowerCase(), capitalize first letter
+            // join (or list equivalent) into string, or use string builder
+            Console.WriteLine("Give me some words separated with a space - no periods!");
+            var input = Console.ReadLine();
+            if (System.String.IsNullOrWhiteSpace(input))
+            {
+                Console.WriteLine("Invalid");
+            }
+            else
+            {
+                string[] inputArr = input.Split(' ');
+                var inputList = new List<string>();
+                foreach (var str in inputArr)
+                {
+                    inputList.Add(str);
+                }
+                for (var i = 0; i < inputList.Count; i++)
+                {
+                    var upperCase = inputList[i].ToUpper();
+                    inputList[i] = upperCase[0] + inputList[i].Substring(1).ToLower();
+                }
+                var camelCase = new StringBuilder();
+                foreach (var word in inputList)
+                {
+                    camelCase.Append(word);
+                }
+                Console.WriteLine("Converted to CamelCase: " + camelCase);
+            }
+        }
 
     }
 }

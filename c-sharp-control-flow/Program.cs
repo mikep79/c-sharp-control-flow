@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 //using System.Linq;
-//using System.Text;
+using System.Text;
 //using System.Threading.Tasks;
 
 namespace c_sharp_control_flow
@@ -213,7 +213,8 @@ namespace c_sharp_control_flow
             //var ex1Result = TextExercises.Exercise1();
             //Console.WriteLine(ex1Result);
             //TextExercises.Exercise2();
-            TextExercises.Exercise3();
+            //TextExercises.Exercise3();
+            //TextExercises.Exercise4();
             
 
         } // end Main method
