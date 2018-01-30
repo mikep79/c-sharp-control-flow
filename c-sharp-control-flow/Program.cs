@@ -63,7 +63,7 @@ namespace c_sharp_control_flow
             //{
             //    Console.WriteLine("Invalid");
             //}
-        
+
             //// #2: Write a program that displays the higher of two numbers.
 
             //int firstNum = 12;
@@ -81,7 +81,7 @@ namespace c_sharp_control_flow
             //{
             //    Console.WriteLine("They're equal!");
             //}
-            
+
             //// #3: Enter image width/height as array. Write program that determines portait or landscape.
 
             //float[] widthHeight = new float[2];
@@ -95,7 +95,7 @@ namespace c_sharp_control_flow
             //else {
             //    Console.WriteLine("It's a portrait.");
             //}
-        
+
             //// #4: Speed limit question.
 
             //int speedLimit = 60;
@@ -130,7 +130,7 @@ namespace c_sharp_control_flow
             //    Console.WriteLine("i: " + i);
             //}
 
-            
+
             //// loop through name until nothing entered
             //while (true)
             //{
@@ -163,7 +163,7 @@ namespace c_sharp_control_flow
             }
             // build pwArr into string
             string password = new String(pwArr);
-            Console.WriteLine(pwArr);
+            //Console.WriteLine(pwArr);
 
             //LoopExercises.Exercise1();
             //LoopExercises.Exercise2();
@@ -177,40 +177,49 @@ namespace c_sharp_control_flow
             //ListExercises.Exercise4();
             //ListExercises.Exercise5();
 
-            // datetimes
-            var dateTime = new DateTime(1999, 8, 30);
-            Console.WriteLine(dateTime.ToString());
-            var now = DateTime.Now;
-            var today = DateTime.Today;
-            Console.WriteLine("Today: " + today);
-            var max = DateTime.MaxValue;
-            var min = DateTime.MinValue;
-            Console.WriteLine("Date Min {0} - Max {1}", min, max);
+            //// datetimes
+            //var dateTime = new DateTime(1999, 8, 30);
+            //Console.WriteLine(dateTime.ToString());
+            //var now = DateTime.Now;
+            //var today = DateTime.Today;
+            //Console.WriteLine("Today: " + today);
+            //var max = DateTime.MaxValue;
+            //var min = DateTime.MinValue;
+            //Console.WriteLine("Date Min {0} - Max {1}", min, max);
 
-            // time spans
-            var span = new TimeSpan(3, 3, 3);
-            Console.WriteLine(span);
-            var fiveHours = TimeSpan.FromHours(5);
-            Console.WriteLine(fiveHours);
+            //// time spans
+            //var span = new TimeSpan(3, 3, 3);
+            //Console.WriteLine(span);
+            //var fiveHours = TimeSpan.FromHours(5);
+            //Console.WriteLine(fiveHours);
 
-            var myName = "Mike";
-            myName = myName.ToUpper();
-            Console.WriteLine(myName);
-            myName.Replace("M", "t");
-            Console.WriteLine(myName);
-            Console.WriteLine(char.MaxValue + " " + char.MinValue);
-            //split string by space by finding indexof and substring(); and split
-            var fullName = "Mike Pettman";
-            int index = fullName.IndexOf(' ');
-            string first = fullName.Substring(0, index);
-            int lastLength = fullName.Length - first.Length - 1;
-            string last = fullName.Substring(index + 1, lastLength);
-            Console.WriteLine(first);
-            Console.WriteLine(last);
-            string[] nameArr = fullName.Split(' ');
-            Console.WriteLine("Name: " + nameArr[0] + " " + nameArr[1]);
+            //var myName = "Mike";
+            //myName = myName.ToUpper();
+            //Console.WriteLine(myName);
+            //myName.Replace("M", "t");
+            //Console.WriteLine(myName);
+            //Console.WriteLine(char.MaxValue + " " + char.MinValue);
+            ////split string by space by finding indexof and substring(); and split
+            //var fullName = "Mike Pettman";
+            //int index = fullName.IndexOf(' ');
+            //string first = fullName.Substring(0, index);
+            //int lastLength = fullName.Length - first.Length - 1;
+            //string last = fullName.Substring(index + 1, lastLength);
+            //Console.WriteLine(first);
+            //Console.WriteLine(last);
+            //string[] nameArr = fullName.Split(' ');
+            //Console.WriteLine("Name: " + nameArr[0] + " " + nameArr[1]);
 
-    }
+            //var ex1Result = TextExercises.Exercise1();
+            //Console.WriteLine(ex1Result);
+            //TextExercises.Exercise2();
+            TextExercises.Exercise3();
+            
+
+        } // end Main method
+
+        
+    } // end program class
 
     public class LoopExercises
     {
@@ -480,6 +489,6 @@ namespace c_sharp_control_flow
             numList.Sort();
             Console.WriteLine("The lowest three numbers are {0}, {1}, and {2}.", numList[0], numList[1], numList[2]);
         }    
-        }
+        
     }
 }
