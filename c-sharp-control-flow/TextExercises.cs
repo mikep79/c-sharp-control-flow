@@ -156,12 +156,11 @@ namespace c_sharp_control_flow
             }
         } // end exercise4()
 
-        public static void Exercise5()
+        public static int Exercise5(string input)
         {
             //5- Write a program and ask the user to enter an English word. Count the number of vowels (a, e, o, u, i) in the word. 
             // So, if the user enters "inadequate", the program should display 6 on the console.
-            Console.WriteLine("give me an English word.");
-            string input = Console.ReadLine().ToLower();
+
             char[] vowels = new char[5] { 'a', 'e', 'o', 'u', 'i' };
             int vowelCount = 0;
             for (var i = 0; i < input.Length; i++)
@@ -174,7 +173,7 @@ namespace c_sharp_control_flow
                     }
                 }
             }
-            Console.WriteLine("Number of vowels in this word = " + vowelCount);
+            return vowelCount;
         }
 
     }

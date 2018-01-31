@@ -215,7 +215,9 @@ namespace c_sharp_control_flow
             //TextExercises.Exercise2();
             //TextExercises.Exercise3();
             //TextExercises.Exercise4();
-            TextExercises.Exercise5();
+            Console.WriteLine("give me an English word.");
+            string input = Console.ReadLine().ToLower();
+            Console.WriteLine("Number of vowels in this word = " + TextExercises.Exercise5(input));
             
         } // end Main method
 
