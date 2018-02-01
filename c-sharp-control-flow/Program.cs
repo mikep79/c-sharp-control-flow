@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 //using System.Linq;
 using System.Text;
+using System.IO;
 //using System.Threading.Tasks;
 
 namespace c_sharp_control_flow
@@ -215,12 +216,17 @@ namespace c_sharp_control_flow
             //TextExercises.Exercise2();
             //TextExercises.Exercise3();
             //TextExercises.Exercise4();
-            Console.WriteLine("give me an English word.");
-            string input = Console.ReadLine().ToLower();
-            Console.WriteLine("Number of vowels in this word = " + TextExercises.Exercise5(input));
-            
+            //Console.WriteLine("give me an English word.");
+            //string input = Console.ReadLine().ToLower();
+            //Console.WriteLine("Number of vowels in this word = " + TextExercises.Exercise5(input));
+
+            //FileDirPathExercises.Exercise1();
+
+            //2- Write a program that reads a text file and displays the longest word in the file.
+
         } // end Main method
 
+        
         
     } // end program class
 
