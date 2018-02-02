@@ -35,7 +35,6 @@ namespace c_sharp_control_flow
                 foreach (var word in textArray)
                     Console.WriteLine(word);
                 Console.WriteLine("Number of words: " + textArray.Length);
-                //newFile.Close();
                 File.Delete(path);
             }
         }
