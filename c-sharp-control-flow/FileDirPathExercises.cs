@@ -37,6 +37,35 @@ namespace c_sharp_control_flow
                 Console.WriteLine("Number of words: " + textArray.Length);
                 File.Delete(path);
             }
+        } // end exercise1()
+
+        public static string Exercise2(string sentence)
+        {
+            //2- Write a program that reads a text file and displays the longest word in the file.
+            var path = @"c:\users\mike\desktop\test_file22.rtf";
+            if (File.Exists(path))
+            {
+                Console.WriteLine("File exists - deleting");
+                File.Delete(path);
+            }
+            using (StreamWriter sw = File.CreateText(path))
+            {
+                sw.WriteLine(sentence);
+                sw.Close();
+            }
+            var fileText = File.ReadAllText(path);
+            String[] textArray = fileText.Split(' ');
+            // assume first word is longest
+            var longestWord = textArray[0];
+            for (var i = 0; i < textArray.Length; i++)
+            {
+                if (textArray[i].Length > longestWord.Length)
+                    longestWord = textArray[i];
+                else
+                    continue;
+            }
+            File.Delete(path);
+            return longestWord;
         }
     }
 }
