@@ -221,9 +221,11 @@ namespace c_sharp_control_flow
             //Console.WriteLine("Number of vowels in this word = " + TextExercises.Exercise5(input));
 
             //FileDirPathExercises.Exercise1();
-            var ex2Result = FileDirPathExercises.Exercise2("Here is a loooooooooooong sentence!");
-            Console.WriteLine("the longest word is: " + ex2Result);
+            //var ex2Result = FileDirPathExercises.Exercise2("Here is a loooooooooooong sentence!");
+            //Console.WriteLine("the longest word is: " + ex2Result);
             
+            // write a program that prints the lowest three of a list of numbers
+
         } // end Main method
         
     } // end program class
